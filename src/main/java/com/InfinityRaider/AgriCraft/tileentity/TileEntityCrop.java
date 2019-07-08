@@ -221,7 +221,7 @@ public class TileEntityCrop extends TileEntityAgricraft implements ICrop, IDebug
     public void spreadWeed() {
         List<ICrop> neighbours = this.getNeighbours();
         for(ICrop crop : neighbours) {
-            if(crop!=null && (!crop.hasWeed()) && Math.random() < this.getWeedSpawnChance(crop)) {
+            if(crop!=null && (!crop.hasWeed()) && Math.random() < crop.getWeedSpawnChance(crop)) {
                 crop.spawnWeed();
                 break;
             }
