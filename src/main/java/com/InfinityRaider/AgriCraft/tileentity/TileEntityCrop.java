@@ -244,7 +244,7 @@ public class TileEntityCrop extends TileEntityAgricraft implements ICrop, IDebug
     public void clearWeed() {updateWeed(0);}
 
     //weed spawn chance
-    private double getWeedSpawnChance(ICrop crop) {
+    public double getWeedSpawnChance(ICrop crop) {
         if(this.hasPlant()) {
             return ConfigurationHandler.weedsWipePlants ? ((double) (10 - crop.getStrength())) / 10 : 0;
         }
